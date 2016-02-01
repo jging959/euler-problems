@@ -28,14 +28,14 @@ while( a < 4000000) {
 }
 
 console.log(sum);
+ 
  // Challenge 3
-
- var num = 600851475143;
+var num = 600851475143;
 var num2 = Math.sqrt(num);
 var solution = 0;
-for (i = 2; i < 600851475143; i++){
+for (i = 2; i < num2; i++){
     prime = true;
-    if (600851475143 % 2 === 0) {
+    if (num % i === 0) {
         for (j = 2; j < Math.sqrt(i); j++) {
             if (i % j === 0) {
                 prime = false;
@@ -43,7 +43,7 @@ for (i = 2; i < 600851475143; i++){
             }
         }
         if(prime){
-            solution = j;
+            solution = i;
         }
     
     }
